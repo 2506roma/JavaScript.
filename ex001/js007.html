@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interagindo</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+    }
+    main{
+        width: 500px;
+        height: auto;
+        margin: auto;
+        background-color: white;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 20px;
+    }
+    button{
+        font-size: 25px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    button:hover{
+        background-color: rgba(0, 0, 0, 0.562);
+        color: white;
+    }
+    #resultado{
+        padding: 20px 20px 20px 0px;
+        font-size: 20px;
+    }
+
+</style>
+
+<body>
+  <main>
+    <h1> Interagindo com html e js</h1>
+    <h2>Click no Botão abaixo para começar</h2>
+    <button onclick="inicio()">  
+        Click aqui para começar
+    </button>
+    <section id="resultado">
+        o resultado sera apresentado aqui.
+    </section>
+  </main>
+    <script>
+        function inicio (){
+            var nome = window.prompt("Qual é o seu nome ?")
+            let res = window.document.getElementById('resultado')
+            res.innerHTML= `<p> Olá, <strong>${nome} </strong> é um prazer em conhecê-lo.`
+            
+        }
+    </script>
+</body>
+</html>
